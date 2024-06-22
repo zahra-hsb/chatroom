@@ -1,8 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
 import { IoMdArrowDropdown } from "react-icons/io"
-import Avatar1 from '../../../public/img/Avatar1.png'
-import Avatar2 from '../../../public/img/Avatar2.png'
+import Avatar1 from '../../../public/img/avatar1.png'
+import Avatar2 from '../../../public/img/avatar2.png'
+import { useState } from "react"
 
 const ChatBox = () => {
 
@@ -17,7 +18,7 @@ const ChatBox = () => {
     }
     return (
         <>
-            <div className="lg:w-2/4 w-full h-full flex-col justify-between pt-5 ">
+            <div className="lg:w-2/4 w-full h-full flex-col justify-between pt-5">
                 <div className="w-full flex lg:hidden justify-between px-10 items-center">
                     <div className="flex items-start justify-center gap-1">
                         <h3 className="text-sm text-[#C5B7FF]">Mentalso</h3>
@@ -33,7 +34,7 @@ const ChatBox = () => {
                         </Link>
                     </div>
                 </div>
-                <section className="flex flex-col gap-3 w-full max-h-[500px] overflow-auto">
+                <section className="flex flex-col gap-3 w-full lg:max-h-[85%] h-screen overflow-auto">
                     {/* pm  */}
                     <div className="flex items-start gap-3">
                         <Image src={Avatar1} alt="" width={30} height={30} className="rounded-full sm:border-2" />
@@ -42,6 +43,12 @@ const ChatBox = () => {
                         </span>
                     </div>
 
+                    <div className="flex items-start gap-3">
+                        {/* <Image src={Avatar1} alt="" width={30} height={30} className="rounded-full sm:border-2"/> */}
+                        <span className="text-white p-3 rounded-xl rounded-bl-none bg-[#3d3d3d] ml-10">
+                            How are you doing?
+                        </span>
+                    </div>
                     <div className="flex items-start gap-3">
                         {/* <Image src={Avatar1} alt="" width={30} height={30} className="rounded-full sm:border-2"/> */}
                         <span className="text-white p-3 rounded-xl rounded-bl-none bg-[#3d3d3d] ml-10">
@@ -75,18 +82,31 @@ const ChatBox = () => {
                         </span>
                         <Image src={Avatar2} alt="" width={30} height={30} className="rounded-full sm:border-2" />
                     </div>
+                    <div className="flex items-start gap-3 justify-end">
+                        <span className="text-white p-3 rounded-xl rounded-br-none bg-[#977efb]">
+                            hey dude! Whutsup?
+                        </span>
+                        <Image src={Avatar2} alt="" width={30} height={30} className="rounded-full sm:border-2" />
+                    </div>
+                    <div className="flex items-start gap-3 justify-end">
+                        <span className="text-white p-3 rounded-xl rounded-br-none bg-[#977efb]">
+                            hey dude! Whutsup?
+                        </span>
+                        <Image src={Avatar2} alt="" width={30} height={30} className="rounded-full sm:border-2" />
+                    </div>
                     {isSent && value && <div className="flex items-start gap-3 justify-end">
                         <span className="text-white p-3 rounded-xl rounded-br-none bg-[#977efb]">
 
                         </span>
                         <Image src={Avatar2} alt="" width={30} height={30} className="rounded-full sm:border-2" />
                     </div>}
-                    <div className="flex p-2 gap-2">
-                        <Image src={Avatar1} alt="" width={20} height={20} className="rounded-full" />
-                        <p className="italic text-sm text-white">is typing...</p>
-                    </div>
+
 
                 </section>
+                <div className="flex p-2 gap-2">
+                    <Image src={Avatar1} alt="" width={20} height={20} className="rounded-full" />
+                    <p className="italic text-sm text-white">is typing...</p>
+                </div>
                 <div className="w-full p-5 rounded text-white bg-[#202020] flex justify-between items-center">
 
                     <input type="text"
