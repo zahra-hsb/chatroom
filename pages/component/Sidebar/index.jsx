@@ -8,13 +8,13 @@ import flag from "@/public/img/flag-Stars-and-Stripes-May-1-1795.webp"
 const Sidebar = () => {
 
     const menu = [
-        { title: 'menu', url: '#', isActive: true },
-        { title: 'users list', url: '#', isActive: false },
-        { title: 'menu', url: '#', isActive: false },
-        { title: 'menu', url: '#', isActive: false },
-        { title: 'menu', url: '#', isActive: false },
-        { title: 'menu', url: '#', isActive: false },
-      ]
+        { title: 'Tanisma & Onam Formu', url: '#', isActive: true },
+        { title: 'Danisanin Dinlenmesi', url: '#', isActive: false },
+        { title: 'Psikolojik Belirti Taramasi', url: '#', isActive: false },
+        { title: 'Yol Haritosini Belirlemme', url: '#', isActive: false },
+        { title: 'Odev & Yapilmasi Gerekenler', url: '#', isActive: false },
+        { title: 'Ik Seansin Sonu', url: '#', isActive: false },
+    ]
     return (
         <>
             <div className="w-full lg:w-1/4 shadow-lg border-2 border-[#efb6ff] rounded-xl h-full bg-gradient-to-br from-[#383838] to-[#1b1b1b] lg:flex flex-col justify-between">
@@ -38,22 +38,26 @@ const Sidebar = () => {
 
 
                 </div>
-                <div className="text-white p-8 hidden lg:block">
-                    <h3 className="text-sm text-[#C5B7FF]">Mentalso</h3>
-                    <h3 className="text-2xl mb-5">Chatroom</h3>
-                    <ul className="flex flex-col gap-2">
+                <div className="text-white p-8 hidden lg:block h-1/2 -mt-44">
+                    <h3 className="text-md text-[#C5B7FF] ">Ucretsiz</h3>
+                    <h3 className="text-2xl mb-5">Tanisma Seansi</h3>
+                    <ul className="flex flex-col gap-1">
                         {menu.map((item, index) => (
                             <>
-                                <li key={index} className={`${item.isActive && 'text-[#C5B7FF] '} hover:text-[#C5B7FF] flex items-center justify-start gap-1`}>
-                                    <div className="flex flex-col items-center gap-[1px]">
+                                <li key={index} className={`${item.isActive ? 'text-[#C5B7FF]  ' : 'text-gray-400'} hover:text-[#C5B7FF] flex items-center justify-start gap-3`}>
+                                    <div className="flex flex-col items-center gap-[3px]">
                                         <FaCircle size={10} />
-                                        {/* <FaCircle size={4} />
-                      <FaCircle size={4} />
-                      <FaCircle size={4} />
-                      <FaCircle size={4} /> */}
+                                        {index !== menu.length - 1 &&
+                                            <>
+                                                <FaCircle size={2} />
+                                                <FaCircle size={2} />
+                                                <FaCircle size={2} />
+                                                <FaCircle size={2} />
+                                            </>
+                                        }
                                     </div>
-                                    <Link className="-mt-1 font-thin" href={item.url}>{item.title}</Link>
-                                </li>
+                                    <Link className="-mt-3 font-thin text-sm" href={item.url}>{item.title}</Link>
+                                </li >
                             </>
                         ))}
                     </ul>
@@ -90,7 +94,7 @@ const Sidebar = () => {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
