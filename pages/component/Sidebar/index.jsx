@@ -17,8 +17,8 @@ const Sidebar = () => {
       ]
     return (
         <>
-            <div className="lg:w-1/4 shadow-lg sm:w-1/2 border-2 border-[#efb6ff] rounded-xl h-full bg-gradient-to-br from-[#383838] to-[#1b1b1b] flex flex-col justify-between">
-                <div className="w-full flex justify-between p-8">
+            <div className="w-full lg:w-1/4 shadow-lg border-2 border-[#efb6ff] rounded-xl h-full bg-gradient-to-br from-[#383838] to-[#1b1b1b] lg:flex flex-col justify-between">
+                <div className="w-full flex justify-between p-5 lg:p-8">
                     <Image src={Logo} alt="logo" />
                     <div className="flex gap-5">
 
@@ -38,7 +38,7 @@ const Sidebar = () => {
 
 
                 </div>
-                <div className="text-white p-8">
+                <div className="text-white p-8 hidden lg:block">
                     <h3 className="text-sm text-[#C5B7FF]">Mentalso</h3>
                     <h3 className="text-2xl mb-5">Chatroom</h3>
                     <ul className="flex flex-col gap-2">
@@ -70,7 +70,7 @@ const Sidebar = () => {
                 </div>
 
 
-                <div className="p-5 flex w-full items-center justify-between border-t border-t-gray-500">
+                <div className="p-3 hidden lg:flex w-full items-center justify-between border-t border-t-gray-500">
                     <div className="flex bg-[#383838] p-1 rounded cursor-pointer border border-gray-500 active:bg-[#484848] hover:bg-[#414141]">
                         <Image src={flag} alt="lang" width={34} />
                         <IoMdArrowDropdown className="cursor-pointer" size={20} fill="white" />
