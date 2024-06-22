@@ -34,7 +34,7 @@ const ChatBox = () => {
                         </Link>
                     </div>
                 </div>
-                <section className="flex flex-col gap-3 w-full lg:max-h-[85%] h-screen overflow-auto">
+                <section className="flex flex-col gap-3 w-full lg:max-h-[85%] h-screen overflow-auto p-2">
                     {/* pm  */}
                     <div className="flex items-start gap-3">
                         <Image src={Avatar1} alt="" width={30} height={30} className="rounded-full sm:border-2" />
