@@ -18,7 +18,7 @@ const ChatBox = () => {
     }
     return (
         <>
-            <div className="lg:w-2/4 w-full h-full flex-col justify-between pt-5">
+            <div className="lg:w-2/4 w-full h-full flex-col justify-between pt-5 lg:mr-28">
                 <div className="w-full flex lg:hidden justify-between px-10 items-center">
                     <div className="flex items-start justify-center gap-1">
                         <h3 className="text-sm text-[#C5B7FF]">Mentalso</h3>
@@ -34,7 +34,7 @@ const ChatBox = () => {
                         </Link>
                     </div>
                 </div>
-                <section className="flex flex-col gap-3 w-full lg:max-h-[85%] h-screen overflow-auto p-2">
+                <section className="flex flex-col gap-3 w-full lg:max-h-[85%] h-screen overflow-auto p-5">
                     {/* pm  */}
                     <div className="flex items-start gap-3">
                         <Image src={Avatar1} alt="" width={30} height={30} className="rounded-full sm:border-2" />
@@ -107,7 +107,7 @@ const ChatBox = () => {
                     <Image src={Avatar1} alt="" width={20} height={20} className="rounded-full" />
                     <p className="italic text-sm text-white">is typing...</p>
                 </div>
-                <div className="w-full p-5 rounded text-white bg-[#202020] flex justify-between items-center">
+                <div className="w-full p-5 rounded shadow text-white bg-[#202020] flex justify-between items-center">
 
                     <input type="text"
                         className="w-full bg-transparent outline-none"
